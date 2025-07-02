@@ -1,0 +1,69 @@
+# Rain Tools - Configuración
+# Plugin de lluvia de items y experiencia para Minecraft 1.20.4
+
+# Configuración general
+general:
+  # Versión de la configuración
+  config-version: 1.0
+  
+  # Idioma del plugin (actualmente solo español)
+  language: "en"
+  
+  # Habilitar debug logging
+  debug: false
+
+# Configuración de las áreas de lluvia
+areas:
+  # Configuración por defecto para nuevas áreas
+  default:
+    # Si las áreas están habilitadas por defecto
+    enabled: true
+    
+    # Si las áreas son de una sola vez por defecto
+    one-time: false
+    
+    # Cantidad de items por bloque por defecto
+    items-per-block: 1
+    
+    # Timer en ticks (20 ticks = 1 segundo)
+    timer-ticks: 20
+    
+    # Cantidad de lluvia por segundo
+    rain-per-second: 1
+    
+    # Configuración de orbes de experiencia por defecto
+    experience-orbs: 1
+    min-exp: 1
+    max-exp: 5
+
+# Configuración de items
+items:
+  # Límite máximo de items guardados
+  max-saved-items: 100
+  
+  # Serialización de items (mantener NBT tags)
+  preserve-nbt: true
+
+# Configuración de rendimiento
+performance:
+  # Límite máximo de áreas activas simultáneamente
+  max-active-areas: 10
+  
+  # Límite máximo de items que pueden caer por tick
+  max-items-per-tick: 50
+  
+  # Límite máximo de entidades que pueden spawnearse por tick
+  max-entities-per-tick: 20
+
+# Mensajes del plugin (personalizables)
+messages:
+  prefix: "§6[Rain Tools] "
+  no-permission: "§cNo tienes permiso para usar este comando."
+  area-created: "§aÁrea '{area}' creada exitosamente."
+  area-deleted: "§aÁrea '{area}' eliminada exitosamente."
+  area-not-found: "§cNo se encontró el área '{area}'."
+  item-saved: "§aItem '{item}' guardado exitosamente."
+  item-deleted: "§aItem '{item}' eliminado exitosamente."
+  item-not-found: "§cNo se encontró el item '{item}'."
+  rain-started: "§aLluvia iniciada en el área '{area}'."
+  rain-stopped: "§aLluvia detenida en el área '{area}'." 

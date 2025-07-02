@@ -1,0 +1,36 @@
+name: RainTools
+version: '${version}'
+main: enchanting.tools.rainTools.RainTools
+api-version: '1.16'
+authors: [whereshegoes]
+description: Plugin para crear áreas de lluvia de items y experiencia
+website: https://github.com/dcatalaan
+
+commands:
+  rainarea:
+    description: Comandos para gestionar áreas de lluvia
+    usage: /rainarea help
+    aliases: [ra]
+    permission: raintools.area.manage
+  saveitem:
+    description: Comandos para gestionar items
+    usage: /saveitem help
+    aliases: [si]
+    permission: raintools.item.save
+
+permissions:
+  raintools.area.create:
+    description: Permite crear áreas de lluvia
+    default: op
+  raintools.area.delete:
+    description: Permite eliminar áreas de lluvia
+    default: op
+  raintools.area.manage:
+    description: Permite gestionar áreas y configuración
+    default: op
+    children:
+      raintools.area.create: true
+      raintools.area.delete: true
+  raintools.item.save:
+    description: Permite guardar y gestionar items
+    default: op
